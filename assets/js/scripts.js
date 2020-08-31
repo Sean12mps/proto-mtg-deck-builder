@@ -84,7 +84,10 @@ $(document).ready(function () {
 		e.preventDefault();
 	} );
 
-	$('[data-toggle="tooltip"]').tooltip();
+	var tooltips = $('[data-toggle="tooltip"]').tooltip({
+		placement : 'auto',
+		trigger : 'hover'
+	});
 
 	$( '.wrapper-spell-group' ).sortable({
 		revert: true,
