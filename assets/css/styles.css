@@ -1,0 +1,63 @@
+.spell {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.spell[size=small] {
+	width: 80px;
+}
+
+.spell[size=medium] {
+	width: 160px;
+}
+
+.spell[size=large] {
+	width: 223px;
+}
+
+.spell .spell-front {
+	width: 100%;
+	height: auto;
+}
+
+.wrapper-spell-group {
+	min-height: 80px;
+	background-color: #dddddd;
+}
+
+.spell-group h2 {
+	cursor: pointer;
+}
+
+.spell-group .spell-group-list {
+	padding: 0px;
+	margin: 0px;
+	min-height: 80px;
+	font-size: 0px;
+}
+.spell-group .spell-group-list li {
+	padding: 3px;
+	display: inline-block;
+    overflow: hidden;
+	list-style-type: none;
+}
+
+/* Tooltip helper. */
+.tooltip.show {
+	opacity: 1;
+}
+
+.tooltip-inner {
+	max-width: inherit;
+	padding: 0.2em;
+	background-color: #fff;
+	border: 1px solid #000;
+	border-radius: 12px;
+}
+
+.tooltip-inner p {
+	margin: 0px;
+	padding: 8px 8px 16px;;
+	color: #000000;
+	text-align: left;
+}

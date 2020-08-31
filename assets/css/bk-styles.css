@@ -1,0 +1,56 @@
+.debug .spell {
+	border: 1px solid #000;
+}
+
+.spell {
+	overflow: hidden;
+	width: 90px;
+	height: 90px;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+}
+
+.spell-front,
+.spell-back {
+	width: auto;
+	height: 100%;
+}
+
+.spell-back {
+	top: -100%;
+    position: relative;
+}
+
+.spell[face=up] .spell-back {
+	display: none;
+}
+
+.spell[face=down] .spell-back {
+	display: inherit;
+}
+
+.spell[tapped=true] .spell-front,
+.spell[tapped=true] .spell-back {
+	transform: rotate(90deg);
+}
+
+.table {
+	width: 100%;
+	height: 400px;
+	background: #ddd;;
+}
+
+.spell-wrapper {
+	height: 90px;
+	position: absolute;
+	z-index: 1;
+}
+
+.spell-wrapper .spell {
+	width: 66px;
+}
+
+.spell-wrapper .spell[tapped=true] {
+	width: 90px;
+}
