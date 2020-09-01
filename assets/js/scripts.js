@@ -41,6 +41,15 @@ $(document).ready(function () {
 	$( '.spell-group-list li' ).draggable( { 
 		revert: 'invalid',
 		connectToSortable: '.spell-group-list',
+		start: function() {
+			$( '[data-toggle="tooltip"]' ).tooltip( 'dispose' );
+		},
+		stop: function() {
+			$( '[data-toggle="tooltip"]' ).tooltip({
+				placement: 'auto',
+				trigger: 'hover',
+			});
+		},
 	});
 	
 	// Makes spells droppable.
