@@ -1,5 +1,21 @@
 <?php // phpcs:disable
 
+function get_header() {
+	include 'partials/header.php';
+}
+
+function get_footer() {
+	include 'partials/footer.php';
+}
+
+function get_header_scripts() {
+	include 'partials/header-scripts.php';
+}
+
+function get_footer_scripts() {
+	include 'partials/footer-scripts.php';
+}
+
 function print_card( $args ) {
 
 	// Options.
