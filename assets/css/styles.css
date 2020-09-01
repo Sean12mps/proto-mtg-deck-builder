@@ -48,7 +48,7 @@
 }
 
 .tooltip-inner {
-	max-width: inherit;
+	width: 240px;
 	padding: 0.2em;
 	background-color: #fff;
 	border: 1px solid #000;
@@ -60,4 +60,9 @@
 	padding: 8px 8px 16px;;
 	color: #000000;
 	text-align: left;
+}
+
+.tooltip-inner img {
+	width: 100%;
+	height: auto;
 }

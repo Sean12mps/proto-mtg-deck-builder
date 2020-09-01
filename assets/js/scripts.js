@@ -56,9 +56,9 @@ $(document).ready(function () {
 $(document).ready(function () {
 
 	// Prevent all spell elements to have default right click behaviour.
-	$('.spell').on('contextmenu', function (e) {
-		e.preventDefault();
-	});
+	// $('.spell').on('contextmenu', function (e) {
+	// 	e.preventDefault();
+	// });
 
 	// Turn on tooltips.
 	var tooltips = $('[data-toggle="tooltip"]').tooltip({
