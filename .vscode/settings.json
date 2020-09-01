@@ -1,3 +1,9 @@
 {
-	"html.autoClosingTags": false
+	// Prevent stupid HTML auto close.
+	"html.autoClosingTags": false,
+
+	// Prevent autoformats.
+	"editor.formatOnPaste": false,
+	"editor.formatOnSave": false,
+	"editor.formatOnType": false,
 }
