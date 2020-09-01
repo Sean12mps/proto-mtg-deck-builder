@@ -1,3 +1,24 @@
+var initializeToolTip = function() {
+	jQuery('[data-toggle="tooltip"]').tooltip({
+		placement: 'auto',
+		trigger: 'hover focus',
+	});
+};
+
+
+// Tooltips.
+$(document).ready(function () {
+
+	// Prevent all spell elements to have default right click behaviour.
+	$('.spell').on('contextmenu', function (e) {
+		e.preventDefault();
+	});
+
+	// Turn on tooltips.
+	initializeToolTip();
+});
+
+
 // Drag and Drop functionalities.
 $(document).ready(function () {
 
@@ -45,10 +66,7 @@ $(document).ready(function () {
 			$( '[data-toggle="tooltip"]' ).tooltip( 'dispose' );
 		},
 		stop: function() {
-			$( '[data-toggle="tooltip"]' ).tooltip({
-				placement: 'auto',
-				trigger: 'hover',
-			});
+			initializeToolTip();
 		},
 	});
 	
@@ -61,17 +79,3 @@ $(document).ready(function () {
 	} );
 });
 
-// Tooltips.
-$(document).ready(function () {
-
-	// Prevent all spell elements to have default right click behaviour.
-	$('.spell').on('contextmenu', function (e) {
-		e.preventDefault();
-	});
-
-	// Turn on tooltips.
-	var tooltips = $('[data-toggle="tooltip"]').tooltip({
-		placement: 'auto',
-		trigger: 'hover focus',
-	});
-});

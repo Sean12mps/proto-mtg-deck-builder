@@ -19,10 +19,11 @@ function get_footer_scripts() {
 function print_card( $args ) {
 
 	// Options.
-	$face   = ( isset( $args['face'] ) ? $args['face'] : 'face-up' );
-	$tapped = ( isset( $args['tapped'] ) && $args['tapped'] === 'true' ? 'true' : 'false' );
-	$size   = ( isset( $args['size'] ) ? $args['size'] : 'small' );
-	$notes  = ( isset( $args['notes'] ) ? $args['notes'] : false );
+	$face    = ( isset( $args['face'] ) ? $args['face'] : 'face-up' );
+	$tapped  = ( isset( $args['tapped'] ) && $args['tapped'] === 'true' ? 'true' : 'false' );
+	$size    = ( isset( $args['size'] ) ? $args['size'] : 'small' );
+	$notes   = ( isset( $args['notes'] ) ? $args['notes'] : false );
+	$rulings = ( isset( $args['rulings'] ) ? $args['rulings'] : false );
 
 	// Contents.
 	$img_url = ( isset( $args['img_url'] ) ? $args['img_url'] : 'assets/img/card-backside.jpg' );
