@@ -74,8 +74,20 @@ $(document).ready(function () {
 	$( '.spell-group-list' ).droppable( { 
 		accept: '.spell-group-list li',
 		drop: function ( event, ui ) {
-			$( this ).append( ui.draggable.css( { position: 'relative', top:'', left:'' } ) );
+			$( this ).append( ui.draggable.css( { position: 'relative', top:'', left:'', height: 'initial' } ) );
 		},
 	} );
+
+
+	/* SIDEBAR TRASH
+	 */
+	$( '#sidebar-trash' ).droppable( { 
+		accept: '.spell-group-list li',
+		drop: function ( event, ui ) {
+			$( ui.draggable ).tooltip( 'dispose' );
+			$( ui.draggable ).remove();
+		},
+	} );
+	$( '#sidebar-trash' ).draggable();
 });
 

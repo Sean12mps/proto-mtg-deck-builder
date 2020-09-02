@@ -16,6 +16,18 @@ function get_footer_scripts() {
 	include 'partials/footer-scripts.php';
 }
 
+function get_content() {
+	include 'partials/content.php';
+}
+
+function get_sidebar_left() {
+	include 'partials/sidebar-left.php';
+}
+
+function get_sidebar_right() {
+	include 'partials/sidebar-right.php';
+}
+
 function print_card( $args ) {
 
 	// Options.
