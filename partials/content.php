@@ -2,7 +2,9 @@
 <div class="row">
 	<div class="col-md-4">
 		<h2>Commander</h2>
-		<?php print_card( array( 'size' => 'medium' ) ); ?>
+		<div id="spell-group-commander">
+			<?php print_card( array( 'size' => 'medium' ) ); ?>
+		</div>
 	</div>
 </div>
 <div class="row">

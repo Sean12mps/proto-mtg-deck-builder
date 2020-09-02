@@ -1,3 +1,13 @@
+.z-1 {
+	z-index: 5;
+}
+.z-2 {
+	z-index: 10;
+}
+.z-3 {
+	z-index: 15;
+}
+
 .spell {
 	display: inline-block;
 	margin: 0 auto;
@@ -108,4 +118,33 @@
 #sidebar-trash:hover {
 	background-color: #d55c5c;
 	color: #fff;
+}
+
+/* Sidebar Right */
+#sidebar-right {
+	position: fixed;
+    right: 0px;
+    height: 60px;
+}
+
+#search-results {
+	width: 140px;
+    min-height: 100vh;
+	float: right;
+	opacity: 0;
+}
+
+#search-results:hover {
+	opacity: 1;
+	background-color: #eaecef;
+}
+
+#sidebar-right .spell-group-list {
+	padding-left: 30px;
+    padding-top: 16px;
+}
+
+#sidebar-right .spell-group-list li {
+	list-style-type: none;
+    margin-bottom: 8px;
 }

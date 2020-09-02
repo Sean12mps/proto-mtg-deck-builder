@@ -78,6 +78,19 @@ $(document).ready(function () {
 		},
 	} );
 
+	$( '#spell-group-commander' ).droppable( { 
+		accept: '.spell-group-list li',
+		drop: function ( event, ui ) {
+			var el = ui.draggable.find( '.spell' );
+
+			$( el ).attr( 'size', 'medium' );
+
+			$( this ).empty();
+			$( this ).append( el );
+			initializeToolTip();
+		},
+	} );
+
 
 	/* SIDEBAR TRASH
 	 */
@@ -88,6 +101,51 @@ $(document).ready(function () {
 			$( ui.draggable ).remove();
 		},
 	} );
+
 	$( '#sidebar-trash' ).draggable();
+
+	/* SEARCH */
+	$( '#spell-search' ).on( 'submit', function( e ) {
+		
+		e.preventDefault();
+
+		$( '#search-results .spell-group-list' ).empty();
+
+		var searchText = $( '#search-value' ).val();
+
+		$.ajax({
+			type: "POST",
+			url: "ajax.php",
+			data: {
+				search_val: searchText,
+			},
+			dataType: "JSON",
+			success: function (response) {
+				
+				if ( response.cards.length > 0 ) {
+
+					$.each( response.cards, function ( i, card ) { 
+
+						var li = $( '<li>'+ card +'</li>' );
+
+						$( '#search-results .spell-group-list' ).append( li );
+					});
+
+					initializeToolTip();
+					
+					$( '#search-results .spell-group-list li' ).draggable( { 
+						revert: 'invalid',
+						connectToSortable: '.spell-group-list',
+						start: function() {
+							$( '[data-toggle="tooltip"]' ).tooltip( 'dispose' );
+						},
+						stop: function() {
+							initializeToolTip();
+						},
+					});
+				}
+			},
+		});
+	} );
 });
 
